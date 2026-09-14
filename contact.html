@@ -8,10 +8,55 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="author" content="GlobalBirth Developers Private Limited"><meta name="theme-color" content="#102A43">
 <link rel="canonical" href="https://globalbirthdevelopers.com/contact.html"><link rel="icon" href="images/logo.jpeg" type="image/jpeg">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <meta property="og:type" content="website"><meta property="og:locale" content="en_IN"><meta property="og:site_name" content="GlobalBirth Developers">
 <meta property="og:title" content="Contact GlobalBirth Developers | Book a Site Visit"><meta property="og:description" content="Request project details, check current availability or arrange a site visit.">
-<meta property="og:url" content="https://globalbirthdevelopers.com/contact.html"><meta property="og:image" content="https://globalbirthdevelopers.com/images/logo.jpeg">
-<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Contact GlobalBirth Developers"><meta name="twitter:description" content="Request project details or arrange a site visit."><meta name="twitter:image" content="https://globalbirthdevelopers.com/images/logo.jpeg">
+<meta property="og:url" content="https://globalbirthdevelopers.com/contact.html"><meta property="og:image" content="https://globalbirthdevelopers.com/images/logo.jpeg"><meta property="og:image:alt" content="GlobalBirth Developers logo">
+<meta name="twitter:card" content="summary"><meta name="twitter:title" content="Contact GlobalBirth Developers"><meta name="twitter:description" content="Request project details or arrange a site visit."><meta name="twitter:image" content="https://globalbirthdevelopers.com/images/logo.jpeg"><meta name="twitter:image:alt" content="GlobalBirth Developers logo">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"ContactPage",
+      "@id":"https://globalbirthdevelopers.com/contact.html#webpage",
+      "url":"https://globalbirthdevelopers.com/contact.html",
+      "name":"Contact GlobalBirth Developers | Book a Site Visit",
+      "description":"Contact GlobalBirth Developers for current project information and site-visit coordination through its Noida office.",
+      "isPartOf":{"@id":"https://globalbirthdevelopers.com/#website"},
+      "mainEntity":{"@id":"https://globalbirthdevelopers.com/#organization"},
+      "breadcrumb":{"@id":"https://globalbirthdevelopers.com/contact.html#breadcrumb"},
+      "dateModified":"2026-09-14",
+      "inLanguage":"en-IN"
+    },
+    {
+      "@type":"Organization",
+      "@id":"https://globalbirthdevelopers.com/#organization",
+      "name":"GlobalBirth Developers Private Limited",
+      "url":"https://globalbirthdevelopers.com/",
+      "logo":"https://globalbirthdevelopers.com/images/logo.jpeg",
+      "telephone":"+91-92177-56106",
+      "email":"info@globalbirthdevelopers.com",
+      "address":{
+        "@type":"PostalAddress",
+        "streetAddress":"Office No. 604/605, Advant Navis Business Park, Sector 142",
+        "addressLocality":"Noida",
+        "addressRegion":"Uttar Pradesh",
+        "postalCode":"201305",
+        "addressCountry":"IN"
+      }
+    },
+    {
+      "@type":"BreadcrumbList",
+      "@id":"https://globalbirthdevelopers.com/contact.html#breadcrumb",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"name":"Home","item":"https://globalbirthdevelopers.com/"},
+        {"@type":"ListItem","position":2,"name":"Contact","item":"https://globalbirthdevelopers.com/contact.html"}
+      ]
+    }
+  ]
+}
+</script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -99,6 +144,31 @@ a{
     padding:70px 0;
 }
 
+.contact-context{
+    max-width:900px;
+    margin:0 auto 34px;
+    text-align:center;
+}
+
+.contact-context h2{
+    color:var(--primary);
+    font-size:clamp(27px,3vw,38px);
+    margin-bottom:10px;
+}
+
+.contact-context p{
+    color:var(--text);
+}
+
+.contact-context a,
+.form-privacy a,
+.contact-direct-link{
+    color:#795713;
+    font-weight:750;
+    text-decoration:underline;
+    text-underline-offset:3px;
+}
+
 .contact-details{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -139,9 +209,11 @@ a{
     margin-bottom:8px;
 }
 
-.detail-card p{
+.detail-card p,
+.detail-card address{
     color:var(--text);
     line-height:1.6;
+    font-style:normal;
 }
 
 .contact-wrapper{
@@ -231,6 +303,14 @@ a{
     transform:translateY(-3px);
 }
 
+.form-privacy{
+    margin-top:14px !important;
+    margin-bottom:0 !important;
+    color:var(--text);
+    font-size:13px;
+    line-height:1.6;
+}
+
 .map-frame{
     width:100%;
     height:420px;
@@ -270,26 +350,35 @@ a{
 
 <body>
 
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <div id="header"></div>
 
-<main>
+<main id="main-content">
 
 <section class="contact-hero">
     <div class="container">
+        <nav class="page-breadcrumb" aria-label="Breadcrumb">
+            <ol><li><a href="/">Home</a></li><li aria-current="page">Contact</li></ol>
+        </nav>
         <span>Contact Us</span>
         <h1>Get in Touch With GlobalBirth Developers</h1>
-        <p>Have a question about our projects, investment options, site visits, or property consultation? We are ready to help you.</p>
+        <p>Request current project information or coordinate a site visit through our Noida office. Each project remains in the location stated on its own page.</p>
     </div>
 </section>
 
 <section class="contact-section">
     <div class="container">
 
+        <div class="contact-context">
+            <h2>Choose a project, then confirm the current details</h2>
+            <p>Explore <a href="corbett-eye.html">Corbett Eye residential plots in Ramnagar</a>, compare the <a href="shubhkadam.html">Shubh Kadam project collection</a>, or review all projects from the <a href="/#services">homepage</a> before contacting the team.</p>
+        </div>
+
         <div class="contact-details">
 
             <div class="detail-card">
                 <div class="detail-icon">
-                    <i class="fa-solid fa-phone"></i>
+                    <i class="fa-solid fa-phone" aria-hidden="true"></i>
                 </div>
                 <h3>Phone</h3>
                 <p><a href="tel:+919217756106">+91 92177 56106</a></p>
@@ -297,7 +386,7 @@ a{
 
             <div class="detail-card">
                 <div class="detail-icon">
-                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                 </div>
                 <h3>Email</h3>
                 <p><a href="mailto:info@globalbirthdevelopers.com">info@globalbirthdevelopers.com</a></p>
@@ -305,10 +394,10 @@ a{
 
             <div class="detail-card">
                 <div class="detail-icon">
-                    <i class="fa-solid fa-location-dot"></i>
+                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
                 </div>
                 <h3>Address</h3>
-                <p>Office No. 604/605, Advant Navis Business Park, Sector 142, Noida, Uttar Pradesh 201305</p>
+                <address>Office No. 604/605, Advant Navis Business Park, Sector 142, Noida, Uttar Pradesh 201305</address>
             </div>
 
         </div>
@@ -317,9 +406,9 @@ a{
 
             <div class="contact-form-box">
                 <h2>Send Your Enquiry</h2>
-                <p>Share your requirements with our team on WhatsApp.</p>
+                <p>Share your requirements with our team on WhatsApp, or <a class="contact-direct-link" href="https://wa.me/919217756106?text=Hello%20GlobalBirth%20Developers%2C%20I%20would%20like%20current%20project%20details." target="_blank" rel="noopener noreferrer">start a direct WhatsApp chat</a>.</p>
 
-                <form id="contact-enquiry-form">
+                <form id="contact-enquiry-form" aria-describedby="contact-form-privacy">
                     <div class="form-group">
                         <label for="contact-name">Your Name</label>
                         <input id="contact-name" name="name" type="text" placeholder="Enter your name" autocomplete="name" required>
@@ -337,12 +426,13 @@ a{
 
                     <div class="form-group">
                         <label for="contact-message">Project or Message</label>
-                        <textarea id="contact-message" name="message" placeholder="Tell us which project you want to visit" required></textarea>
+                        <textarea id="contact-message" name="message" rows="5" placeholder="Tell us which project you want to visit" required></textarea>
                     </div>
 
                     <button type="submit" class="submit-btn">
                         Send on WhatsApp <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
                     </button>
+                    <p class="form-privacy" id="contact-form-privacy">Submitting opens WhatsApp with the details you entered. The website does not transmit this form to its own server. Review our <a href="privacy-policy.html">Privacy Policy</a> before sending personal information.</p>
                 </form>
             </div>
 
@@ -351,7 +441,7 @@ a{
                 <p>Find us easily and connect with our professional support team.</p>
 
                 <div class="map-frame">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d1518.366700217885!2d77.40953450859571!3d28.500661778341982!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDMwJzAzLjkiTiA3N8KwMjQnMzYuMCJF!5e1!3m2!1sen!2sin!4v1780896766035!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe title="Map showing the GlobalBirth Developers office in Sector 142, Noida" src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d1518.366700217885!2d77.40953450859571!3d28.500661778341982!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjjCsDMwJzAzLjkiTiA3N8KwMjQnMzYuMCJF!5e1!3m2!1sen!2sin!4v1780896766035!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
 

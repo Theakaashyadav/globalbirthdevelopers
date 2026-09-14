@@ -2,6 +2,11 @@
 # These may contain cookies, history, cached credentials, and machine-specific data.
 .edge-audit/
 .edge-audit-mobile/
+.edge-seo-*/
+
+# Local screenshots and reports produced during browser audits.
+*-audit.png
+baseline-*.png
 
 # Local secrets and operating-system clutter.
 .env

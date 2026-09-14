@@ -1,0 +1,12 @@
+{
+  "name": "globalbirth-developers-website",
+  "private": true,
+  "description": "Static GlobalBirth Developers website and local SEO quality checks.",
+  "scripts": {
+    "audit:seo": "node scripts/seo-audit.mjs",
+    "test": "npm run audit:seo"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

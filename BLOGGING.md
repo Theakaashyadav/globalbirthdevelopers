@@ -15,6 +15,7 @@ The live blog index is `blogs.html`. Published article files live in the website
 
 5. Write the article for a real buyer question. Use one descriptive H1, useful H2/H3 sections, short paragraphs, lists or a table where they improve understanding, and a clear next action.
 6. Link naturally to the most relevant project page, `blogs.html`, at least one related article and `contact.html`. Do not stuff repeated exact-match keywords into headings or links.
+7. Link to the homepage as `/` (or `/#section-id`), never `index.html`, so internal links do not pass through the homepage redirect.
 
 ## Update page metadata
 
@@ -24,7 +25,7 @@ Every article needs unique values for:
 - meta description (a useful summary, usually near 140–160 characters);
 - canonical URL using `https://globalbirthdevelopers.com/FILENAME.html`;
 - Open Graph title, description, URL, image and image alt;
-- Twitter title, description and image;
+- Twitter title, description, image and image alt;
 - `article:published_time` and `article:modified_time`; and
 - visible H1, standfirst, author, reading time and `<time datetime="YYYY-MM-DD">`.
 
@@ -48,18 +49,29 @@ Keep the organisation author/publisher details and logo URL unless the publisher
 Add a new `<article class="blog-card">` inside the `.blog-grid` in `blogs.html`. Update its image, transparent stock-image caption, category, H2, visible date, reading time, excerpt and link. In the `CollectionPage` JSON-LD:
 
 1. increase `mainEntity.numberOfItems`;
-2. append a new `ListItem` with the next position, absolute URL and article name; and
+2. put the newest card first, prepend its `ListItem` at position 1 and renumber every later item contiguously;
 3. update `dateModified`.
 
-Keep the newest or most important guide in the featured area. Avoid showing a post as published before its actual publication date.
+Feature the newest guide so the featured story, visible card order and structured-data order stay aligned. Avoid showing a post as published before its actual publication date.
 
 ### Sitemap
 
 Add the canonical article URL to `sitemap.xml` with a correct `<lastmod>` date. Also update the `blogs.html` entry when the index changes. Use ISO dates (`YYYY-MM-DD`) and do not invent change frequencies or priority values that the site does not maintain.
 
+`lastmod` records the last substantive content change, not the upload time. Do not bump unchanged URLs during a deployment, and keep article `lastmod`, `article:modified_time` and JSON-LD `dateModified` aligned.
+
 ### RSS feed
 
 Add an `<item>` to `feed.xml` containing the article title, canonical link, stable GUID, publication date and a concise description. Put newest items first, escape XML characters such as `&` as `&amp;`, and update the channel build date.
+
+Use an RFC 822-style date with the India offset, for example `Mon, 14 Sep 2026 00:00:00 +0530`. The channel `lastBuildDate` must not predate the newest item.
+
+## Dates and genuine freshness
+
+- Keep a year in an SEO title or heading only when the article contains genuinely year-specific information that will be reviewed and maintained.
+- Do not add a year to the blog index title, heading or card title merely to imply freshness.
+- Change a published article's modified date only after a meaningful factual or editorial update; typo-only or link-only edits do not justify a freshness bump.
+- Retain the original publication date when updating an article and record the real modification date separately.
 
 ## Editorial and SEO quality checks
 
@@ -78,6 +90,7 @@ Run these checks from the website root:
 ```powershell
 rg -n "REPLACE_|FAQPage" blog-your-new-slug.html
 rg -n "canonical|og:url|datePublished|dateModified|BreadcrumbList|BlogPosting" blog-your-new-slug.html
+npm run audit:seo
 ```
 
 Then confirm manually:
@@ -86,9 +99,9 @@ Then confirm manually:
 - no broken internal links or missing images;
 - canonical, Open Graph URL and schema URLs all match the final HTTPS URL;
 - metadata and JSON-LD parse without errors;
+- the RSS item and blog-index `ItemList` match the visible title, URL, date and newest-first order;
 - the mobile layout, keyboard focus and shared navigation work;
 - the new card opens the correct page; and
 - both `sitemap.xml` and `feed.xml` contain the final canonical URL.
 
-After deployment, request indexing through the site’s verified search-console property and monitor coverage, impressions and queries. Indexing requests help discovery but do not guarantee a ranking position.
-
+After deployment, verify the final URL returns `200`, its canonical is present in the rendered HTML, and `sitemap.xml` and `feed.xml` return valid XML. Test the URL in Schema.org Validator and Google's Rich Results Test, submit or refresh the sitemap in the verified Google Search Console domain property, and inspect/request indexing for the new article. Validate the feed in an RSS validator or feed reader. Then monitor indexing, impressions, queries and qualified enquiries. These checks aid discovery and diagnosis; they do not guarantee indexing or a ranking position.

@@ -3,6 +3,8 @@
   COPY THIS FILE TO THE WEBSITE ROOT BEFORE EDITING OR PREVIEWING IT.
   Shared component paths below are intentionally root-relative to the project folder.
   Replace every REPLACE_ token before publication.
+  PUBLISHING SAFETY: replace REPLACE_ROBOTS_BEFORE_PUBLISHING only after the
+  copied article is complete, reviewed and ready to be indexed.
 -->
 <html lang="en-IN">
 <head>
@@ -10,7 +12,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>REPLACE_META_TITLE</title>
 <meta name="description" content="REPLACE_META_DESCRIPTION">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<!-- REPLACE_ROBOTS_BEFORE_PUBLISHING: keep the reusable template out of search results. -->
+<meta name="robots" content="noindex, nofollow">
 <meta name="author" content="GlobalBirth Developers Private Limited">
 <meta name="theme-color" content="#102A43">
 <meta name="geo.region" content="IN-UK">
@@ -35,6 +38,7 @@
 <meta name="twitter:title" content="REPLACE_META_TITLE">
 <meta name="twitter:description" content="REPLACE_SOCIAL_DESCRIPTION">
 <meta name="twitter:image" content="REPLACE_ABSOLUTE_1200X630_IMAGE_URL">
+<meta name="twitter:image:alt" content="REPLACE_SOCIAL_IMAGE_ALT">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <link rel="stylesheet" href="blog.css">
 <script type="application/ld+json">
@@ -100,7 +104,7 @@
         </header>
 
         <nav class="breadcrumb" aria-label="Breadcrumb">
-            <div class="container"><ol><li><a href="index.html">Home</a></li><li><a href="blogs.html">Blogs</a></li><li aria-current="page">REPLACE_SHORT_BREADCRUMB</li></ol></div>
+            <div class="container"><ol><li><a href="/">Home</a></li><li><a href="blogs.html">Blogs</a></li><li aria-current="page">REPLACE_SHORT_BREADCRUMB</li></ol></div>
         </nav>
 
         <div class="article-shell" id="article-content">
