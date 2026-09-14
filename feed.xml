@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GlobalBirth Developers Property Guides</title>
+    <link>https://globalbirthdevelopers.com/blogs.html</link>
+    <description>Practical property guides, project updates and site-visit resources from GlobalBirth Developers.</description>
+    <language>en-IN</language>
+    <lastBuildDate>Mon, 07 Sep 2026 00:00:00 +0530</lastBuildDate>
+    <atom:link href="https://globalbirthdevelopers.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <image>
+      <url>https://globalbirthdevelopers.com/images/logo.jpeg</url>
+      <title>GlobalBirth Developers Property Guides</title>
+      <link>https://globalbirthdevelopers.com/blogs.html</link>
+    </image>
+    <item>
+      <title>Corbett Eye Ramnagar: A Buyer’s Project Guide</title>
+      <link>https://globalbirthdevelopers.com/blog-corbett-eye-ramnagar-guide.html</link>
+      <guid isPermaLink="true">https://globalbirthdevelopers.com/blog-corbett-eye-ramnagar-guide.html</guid>
+      <description>Research Corbett Eye Ramnagar with a buyer-first guide to its published overview, location, plot checks, documents, costs and productive site visits.</description>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Buying Plots Near Jim Corbett: A Due-Diligence Guide</title>
+      <link>https://globalbirthdevelopers.com/blog-buying-plots-near-jim-corbett.html</link>
+      <guid isPermaLink="true">https://globalbirthdevelopers.com/blog-buying-plots-near-jim-corbett.html</guid>
+      <description>Use this practical due-diligence guide before buying a plot near Jim Corbett: check title, land use, access, approvals, utilities, costs and terms.</description>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0530</pubDate>
+    </item>
+    <item>
+      <title>Ramnagar Property Site Visit: A Practical Checklist</title>
+      <link>https://globalbirthdevelopers.com/blog-ramnagar-property-site-visit.html</link>
+      <guid isPermaLink="true">https://globalbirthdevelopers.com/blog-ramnagar-property-site-visit.html</guid>
+      <description>Plan a useful Ramnagar property site visit with a practical before, during and after checklist for access, plot boundaries, utilities and documents.</description>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0530</pubDate>
+    </item>
+  </channel>
+</rss>

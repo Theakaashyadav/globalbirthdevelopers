@@ -1,0 +1,13 @@
+# Local browser profiles created during website audits.
+# These may contain cookies, history, cached credentials, and machine-specific data.
+.edge-audit/
+.edge-audit-mobile/
+
+# Local secrets and operating-system clutter.
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log

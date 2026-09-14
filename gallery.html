@@ -1,0 +1,594 @@
+﻿<!DOCTYPE html>
+<html lang="en-IN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Gallery | GlobalBirth Developers</title>
+<meta name="description" content="Browse the GlobalBirth Developers gallery for project, planning, team and development highlights from our real estate work.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1"><meta name="author" content="GlobalBirth Developers Private Limited"><meta name="theme-color" content="#102A43">
+<link rel="canonical" href="https://globalbirthdevelopers.com/gallery.html"><link rel="icon" href="images/logo.jpeg" type="image/jpeg">
+<meta property="og:type" content="website"><meta property="og:locale" content="en_IN"><meta property="og:site_name" content="GlobalBirth Developers"><meta property="og:title" content="Project Gallery | GlobalBirth Developers"><meta property="og:description" content="Project, planning, team and development highlights from GlobalBirth Developers."><meta property="og:url" content="https://globalbirthdevelopers.com/gallery.html"><meta property="og:image" content="https://globalbirthdevelopers.com/images/logo.jpeg">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Project Gallery | GlobalBirth Developers"><meta name="twitter:description" content="Browse project and development highlights."><meta name="twitter:image" content="https://globalbirthdevelopers.com/images/logo.jpeg">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+:root{
+    --primary:#102A43;
+    --primary-2:#1E3A5F;
+    --secondary:#C9A24D;
+    --secondary-light:#E8C976;
+    --dark:#1F2933;
+    --text:#5F6C7B;
+    --muted:#7B8794;
+    --white:#FFFFFF;
+    --ivory:#FAF6EC;
+    --cream:#FFF9EC;
+    --sand:#EFE6D2;
+    --border:rgba(201,162,77,.28);
+    --gradient-gold:linear-gradient(135deg,#C9A24D 0%,#E8C976 100%);
+    --gradient-soft:linear-gradient(180deg,#FAF6EC 0%,#FFFFFF 100%);
+    --shadow:0 18px 45px rgba(16,42,67,.14);
+    --shadow-hover:0 30px 80px rgba(16,42,67,.24);
+    --radius:24px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html,
+body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+body{
+    background:var(--gradient-soft);
+    color:var(--dark);
+    padding-top:120px;
+}
+
+a,
+a:hover,
+a:focus,
+a:active,
+a:visited{
+    text-decoration:none !important;
+}
+
+.menu a::after,
+.menu a:hover::after{
+    display:none !important;
+    width:0 !important;
+}
+
+img{
+    max-width:100%;
+}
+
+.container{
+    width:min(1250px,94%);
+    margin:auto;
+}
+
+/* Header/Footer Fix */
+header{
+    z-index:99999 !important;
+}
+
+.footer{
+    position:relative;
+    z-index:5;
+    margin-top:0 !important;
+}
+
+/* Gallery Section */
+.gallery-section{
+    min-height:auto;
+    padding:60px 8% 90px;
+    text-align:center;
+    position:relative;
+    overflow:visible;
+    background:
+        radial-gradient(circle at 10% 10%,rgba(201,162,77,.14),transparent 22%),
+        radial-gradient(circle at 90% 80%,rgba(16,42,67,.10),transparent 25%),
+        linear-gradient(180deg,var(--ivory),#fff);
+}
+
+.gallery-section::before{
+    content:"";
+    position:absolute;
+    width:360px;
+    height:360px;
+    border-radius:50%;
+    background:rgba(201,162,77,.14);
+    top:80px;
+    left:-120px;
+    pointer-events:none;
+    z-index:0;
+}
+
+.gallery-section::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(16,42,67,.10);
+    bottom:60px;
+    right:-100px;
+    pointer-events:none;
+    z-index:0;
+}
+
+.gallery-header{
+    position:relative;
+    z-index:2;
+    max-width:760px;
+    margin:0 auto 55px;
+}
+
+.gallery-header span{
+    display:inline-block;
+    color:#8A6416;
+    background:rgba(201,162,77,.15);
+    border:1px solid var(--border);
+    padding:8px 22px;
+    border-radius:30px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    margin-bottom:16px;
+}
+
+.gallery-header h1{
+    font-size:46px;
+    color:var(--primary);
+    font-weight:800;
+    margin-bottom:14px;
+}
+
+.gallery-header p{
+    color:var(--text);
+    line-height:1.8;
+    font-size:16px;
+}
+
+/* Pinterest Masonry Gallery */
+.gallery{
+    position:relative;
+    z-index:2;
+    columns:4 260px;
+    column-gap:22px;
+    text-align:left;
+}
+
+.gallery-item{
+    width:100%;
+    display:inline-block;
+    margin:0 0 22px;
+    position:relative;
+    overflow:hidden;
+    border-radius:var(--radius);
+    cursor:pointer;
+    box-shadow:var(--shadow);
+    border:1px solid var(--border);
+    background:var(--white);
+    transition:.35s ease;
+    break-inside:avoid;
+    -webkit-column-break-inside:avoid;
+    page-break-inside:avoid;
+}
+
+.gallery-item img{
+    width:100%;
+    height:auto;
+    display:block;
+    object-fit:cover;
+    transition:.45s ease;
+}
+
+.gallery-item:hover{
+    transform:translateY(-8px);
+    box-shadow:var(--shadow-hover);
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+    filter:brightness(.72);
+}
+
+.gallery-item::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to top,rgba(16,42,67,.88),transparent);
+    opacity:0;
+    transition:.35s ease;
+    z-index:1;
+    pointer-events:none;
+}
+
+.gallery-item:hover::before{
+    opacity:1;
+}
+
+.gallery-item::after{
+    content:"View Image";
+    position:absolute;
+    bottom:18px;
+    left:20px;
+    color:var(--white);
+    background:var(--gradient-gold);
+    padding:8px 18px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:800;
+    opacity:0;
+    transform:translateY(12px);
+    transition:.35s ease;
+    z-index:2;
+    pointer-events:none;
+}
+
+.gallery-item:hover::after{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.gallery-item.tall,
+.gallery-item.wide{
+    grid-row:auto;
+    grid-column:auto;
+}
+
+/* Lightbox */
+#lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(16,42,67,.95);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:999999;
+    padding:25px;
+}
+
+#lightbox img{
+    max-width:92%;
+    max-height:88%;
+    border-radius:18px;
+    box-shadow:0 30px 80px rgba(0,0,0,.55);
+    animation:zoomIn .3s ease;
+    border:4px solid var(--secondary);
+}
+
+#lightbox .close{
+    position:absolute;
+    top:24px;
+    right:34px;
+    width:48px;
+    height:48px;
+    background:var(--gradient-gold);
+    color:var(--primary);
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:34px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+#lightbox .close:hover{
+    transform:rotate(90deg);
+}
+
+@keyframes zoomIn{
+    from{
+        transform:scale(.75);
+        opacity:0;
+    }
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+/* Laptop */
+@media(max-width:1200px){
+    .gallery-section{
+        padding:55px 5% 75px;
+    }
+
+    .gallery-header h1{
+        font-size:40px;
+    }
+
+    .gallery{
+        columns:3 230px;
+        column-gap:20px;
+    }
+}
+
+/* Tablet */
+@media(max-width:992px){
+    body{
+        padding-top:105px;
+    }
+
+    .gallery-section{
+        padding:45px 24px 65px;
+    }
+}
+
+@media(max-width:900px){
+    .gallery-header{
+        margin-bottom:40px;
+    }
+
+    .gallery-header h1{
+        font-size:34px;
+    }
+
+    .gallery{
+        columns:2 220px;
+        column-gap:16px;
+    }
+
+    .gallery-item{
+        margin-bottom:16px;
+    }
+}
+
+/* Mobile */
+@media(max-width:600px){
+    body{
+        padding-top:95px;
+    }
+
+    .gallery-section{
+        padding:35px 14px 48px;
+    }
+
+    .gallery-section::before{
+        width:220px;
+        height:220px;
+        left:-100px;
+        top:40px;
+    }
+
+    .gallery-section::after{
+        width:200px;
+        height:200px;
+        right:-90px;
+        bottom:40px;
+    }
+
+    .gallery-header span{
+        font-size:12px;
+        padding:7px 16px;
+        letter-spacing:1.5px;
+    }
+
+    .gallery-header h1{
+        font-size:28px;
+        line-height:1.25;
+    }
+
+    .gallery-header p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+    .gallery{
+        columns:1;
+        column-gap:0;
+    }
+
+    .gallery-item{
+        margin-bottom:18px;
+        border-radius:18px;
+    }
+
+    .gallery-item::after{
+        opacity:1;
+        transform:none;
+        font-size:13px;
+        padding:7px 14px;
+    }
+
+    #lightbox{
+        padding:16px;
+    }
+
+    #lightbox img{
+        max-width:100%;
+        max-height:82%;
+        border-radius:14px;
+        border-width:3px;
+    }
+
+    #lightbox .close{
+        top:16px;
+        right:16px;
+        width:42px;
+        height:42px;
+        font-size:30px;
+    }
+}
+
+/* Small Mobile */
+@media(max-width:380px){
+    .gallery-section{
+        padding:30px 10px 40px;
+    }
+
+    .gallery-header h1{
+        font-size:25px;
+    }
+
+    #lightbox .close{
+        width:38px;
+        height:38px;
+        font-size:27px;
+    }
+}
+</style>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<section class="gallery-section">
+
+    <div class="gallery-header">
+        <span>Our Gallery</span>
+        <h1>Moments That Define Our Work</h1>
+        <p>
+            Explore our collection of professional spaces, teamwork, creativity,
+            innovation, and successful business moments.
+        </p>
+    </div>
+
+    <div class="gallery">
+
+        <div class="gallery-item wide">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop" alt="Team Work">
+        </div>
+
+        <div class="gallery-item tall">
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=900&auto=format&fit=crop" alt="Business Meeting">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=900&auto=format&fit=crop" alt="Office Space">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=900&auto=format&fit=crop" alt="Discussion">
+        </div>
+
+        <div class="gallery-item tall">
+            <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=900&auto=format&fit=crop" alt="Planning">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=900&auto=format&fit=crop" alt="Team Collaboration">
+        </div>
+
+        <div class="gallery-item wide">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop" alt="Innovation">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1560264280-88b68371db39?q=80&w=900&auto=format&fit=crop" alt="Office Team">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=900&auto=format&fit=crop" alt="Corporate Work">
+        </div>
+
+       <div class="gallery-item tall">
+    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=900&auto=format&fit=crop" alt="Founder">
+</div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=900&auto=format&fit=crop" alt="Presentation">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=900&auto=format&fit=crop" alt="Startup Team">
+        </div>
+
+        <div class="gallery-item wide">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop" alt="Digital Work">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=900&auto=format&fit=crop" alt="Analytics">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=900&auto=format&fit=crop" alt="Meeting Room">
+        </div>
+
+        <div class="gallery-item tall">
+            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=900&auto=format&fit=crop" alt="Team Discussion">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=900&auto=format&fit=crop" alt="Workspace">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=900&auto=format&fit=crop" alt="Business Work">
+        </div>
+
+    </div>
+</section>
+
+<div id="lightbox">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" alt="Gallery Preview">
+</div>
+
+<div id="footer"></div>
+
+<script src="js/common.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.querySelector("#lightbox .close");
+
+    document.querySelectorAll(".gallery-item").forEach(item => {
+        item.addEventListener("click", () => {
+            const img = item.querySelector("img");
+
+            if (!img) return;
+
+            lightbox.style.display = "flex";
+            lightboxImg.src = img.getAttribute("src");
+            lightboxImg.alt = img.getAttribute("alt") || "Gallery Image";
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    closeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        lightbox.style.display = "none";
+        document.body.style.overflow = "";
+    });
+
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = "none";
+            document.body.style.overflow = "";
+        }
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+            lightbox.style.display = "none";
+            document.body.style.overflow = "";
+        }
+    });
+
+});
+</script>
+
+</body>
+</html>

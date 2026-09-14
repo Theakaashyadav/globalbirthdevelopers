@@ -1,0 +1,276 @@
+﻿<header>
+    <div class="container nav">
+
+        <a class="brand" href="index.html">
+            <img src="images/logo.jpeg" alt="GlobalBirth Logo">
+        </a>
+
+        <nav class="menu" id="menu" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="index.html#services">Projects</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact Us</a>
+            <a class="mobile-enquire" href="contact.html">Enquire Now</a>
+        </nav>
+
+        <a class="btn btn-primary desktop-btn" href="contact.html">Enquire Now</a>
+
+        <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation" aria-controls="menu" aria-expanded="false">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+
+    </div>
+</header>
+
+<style>
+header{
+    position:fixed;
+    top:18px;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(1380px,95%);
+    z-index:9999;
+    background:rgba(255,255,255,.82);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+    border:1px solid rgba(201,162,77,.18);
+    border-radius:22px;
+    box-shadow:0 10px 40px rgba(16,42,67,.12),0 2px 10px rgba(0,0,0,.05);
+}
+
+.nav{
+    height:90px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 25px;
+    gap:30px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+}
+
+.brand img{
+    height:68px;
+    width:auto;
+    background:#fff;
+    border-radius:14px;
+    padding:4px;
+    transition:.3s;
+}
+
+.brand img:hover{
+    transform:scale(1.03);
+}
+
+.menu{
+    display:flex;
+    align-items:center;
+    gap:35px;
+    font-weight:700;
+}
+
+.menu a{
+    position:relative;
+    color:var(--primary);
+    font-size:15px;
+    letter-spacing:.3px;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:var(--secondary);
+}
+
+.menu a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-7px;
+    width:0;
+    height:2px;
+    background:var(--secondary);
+    transition:.3s;
+}
+
+.menu a:hover::after{
+    width:100%;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:13px 28px;
+    border-radius:999px;
+    font-weight:800;
+    transition:.35s;
+    border:none;
+    cursor:pointer;
+}
+
+.btn-primary{
+    background:var(--gradient-gold);
+    color:var(--primary);
+    box-shadow:0 10px 25px rgba(201,162,77,.25);
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    box-shadow:0 16px 35px rgba(201,162,77,.35);
+}
+
+.hamburger{
+    display:none;
+    width:46px;
+    height:46px;
+    border:none;
+    background:var(--gradient-gold);
+    color:var(--primary);
+    border-radius:12px;
+    font-size:20px;
+    cursor:pointer;
+}
+
+.mobile-enquire{
+    display:none;
+}
+
+.hero{
+    margin-top:-110px;
+    padding-top:110px;
+}
+
+@media(max-width:992px){
+    header{
+        width:96%;
+        top:10px;
+    }
+
+    .nav{
+        height:80px;
+        padding:0 18px;
+        gap:14px;
+    }
+
+    .brand img{
+        height:58px;
+    }
+
+    .desktop-btn{
+        display:none;
+    }
+
+    .hamburger{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .menu{
+        position:absolute;
+        top:95px;
+        left:0;
+        width:100%;
+        background:#fff;
+        border:1px solid rgba(201,162,77,.18);
+        border-radius:20px;
+        padding:22px;
+        box-shadow:0 20px 50px rgba(16,42,67,.18);
+        display:flex;
+        flex-direction:column;
+        align-items:stretch;
+        gap:16px;
+        opacity:0;
+        visibility:hidden;
+        transform:translateY(-12px);
+        transition:.3s ease;
+    }
+
+    .menu.active{
+        opacity:1;
+        visibility:visible;
+        transform:translateY(0);
+    }
+
+    .menu a{
+        padding:10px 12px;
+        text-align:center;
+    }
+
+    .menu a::after{
+        display:none;
+    }
+
+    .mobile-enquire{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:var(--gradient-gold);
+        color:var(--primary) !important;
+        padding:13px 18px !important;
+        border-radius:999px;
+        font-weight:900;
+        margin-top:5px;
+    }
+}
+
+@media(max-width:576px){
+    header{
+        border-radius:18px;
+    }
+
+    .nav{
+        height:74px;
+        padding:0 14px;
+    }
+
+    .brand img{
+        height:52px;
+    }
+
+    .hamburger{
+        width:42px;
+        height:42px;
+        font-size:18px;
+    }
+
+    .menu{
+        top:88px;
+    }
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+    const hamburger = document.getElementById("hamburger");
+    const menu = document.getElementById("menu");
+
+    if(hamburger && menu){
+        hamburger.addEventListener("click", function(){
+            menu.classList.toggle("active");
+
+            const isOpen = menu.classList.contains("active");
+            hamburger.setAttribute("aria-expanded", String(isOpen));
+            hamburger.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
+
+            hamburger.innerHTML = isOpen
+                ? '<i class="fa-solid fa-xmark"></i>'
+                : '<i class="fa-solid fa-bars"></i>';
+        });
+
+        menu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", function(){
+                menu.classList.remove("active");
+                hamburger.setAttribute("aria-expanded", "false");
+                hamburger.setAttribute("aria-label", "Open navigation");
+                hamburger.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            });
+        });
+    }
+});
+</script>

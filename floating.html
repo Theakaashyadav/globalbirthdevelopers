@@ -1,0 +1,59 @@
+﻿<div class="floating-whatsapp">
+    <a href="https://wa.me/919217756106?text=Hello%20GlobalBirth%20Developers%2C%20I%20would%20like%20project%20details." target="_blank" rel="noopener noreferrer" aria-label="Chat with GlobalBirth Developers on WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+</div>
+
+<style>
+.floating-whatsapp{
+    position:fixed;
+    right:25px;
+    bottom:25px;
+    z-index:9999;
+}
+
+.floating-whatsapp a{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#25D366;
+    color:#fff;
+    font-size:34px;
+    text-decoration:none;
+    box-shadow:0 12px 35px rgba(37,211,102,.4);
+    animation:pulseWhatsapp 2s infinite;
+    transition:.3s;
+}
+
+.floating-whatsapp a:hover{
+    transform:scale(1.1);
+}
+
+@keyframes pulseWhatsapp{
+    0%{
+        box-shadow:0 0 0 0 rgba(37,211,102,.7);
+    }
+    70%{
+        box-shadow:0 0 0 18px rgba(37,211,102,0);
+    }
+    100%{
+        box-shadow:0 0 0 0 rgba(37,211,102,0);
+    }
+}
+
+@media(max-width:768px){
+    .floating-whatsapp{
+        right:18px;
+        bottom:18px;
+    }
+
+    .floating-whatsapp a{
+        width:58px;
+        height:58px;
+        font-size:30px;
+    }
+}
+</style>
